@@ -1,6 +1,6 @@
 $(window).on("load", function() {
 	var _radio = [];
-	$('input.radio').on('click', function() {
+	$('input.radio-btn').on('click', function() {
 		var _this = $(this);
 		var _name = _this.attr('name');
 		var _val  = _this.val();
@@ -17,3 +17,4 @@ $(window).on("load", function() {
 		}
 	});
 });
+
