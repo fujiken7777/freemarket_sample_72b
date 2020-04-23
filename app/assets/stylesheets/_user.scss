@@ -1094,11 +1094,96 @@
   font-size: 12px;
   height: 100px;
   width: 100%;
-  // width: 350px;
-  // background-color: red;
   li{
     height: 20px;
     width: 100%;
     margin-top: 2px;
+  }
+}
+
+// < パスワードお忘れページ >
+.pass-content-all{
+  height: 500px;
+  width: 700px;
+  margin: auto;
+  background-color: white;
+  .user-content-header{
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .user-content-main{
+    .error{
+      height: 100px;
+      width: 340px;
+      margin: auto;
+      text-align: center;
+      line-height: 100px;
+    }
+    .email{
+      height: 30px;
+      width: 340px;
+      margin: auto;
+    }
+    .email-group{
+      height: 100px;
+      width: 340px;
+      margin: auto;
+      .email-field{
+        height: 45px;
+        width: 338px;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        border: 1px solid rgb(234, 232, 232);
+      }
+    }
+    .submit{
+      height: 70px;
+      width: 340px;
+      margin: auto;
+      .send-btn{
+        height: 45px;
+        width: 350px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        background-color: red;
+        margin-top: 10px;
+      }
+    }
+    .render{
+      height: 100px;
+      width: 340px;
+      margin: auto;
+      text-align: center;
+      .login{
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        .log-field{
+          text-decoration: none;
+          color: rgb(151, 225, 255);
+          cursor: pointer;
+        }
+      }
+      .signup{
+        height: 50px;
+        width: 100%;
+        line-height: 30px;
+        .up-field{
+          text-decoration: none;
+          color: rgb(151, 225, 255);
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
