@@ -7,15 +7,15 @@
 
 ### 開発状況
 - 開発環境
-    開発言語：
-        Ruby/Ruby on Railsi
-    開発ツール：
-        Gthub/AWS/Visual Studio Code
-    データベース：
-        MySQL
+    - 開発言語：
+        - Ruby/Ruby on Railsi
+    - 開発ツール：
+        - Gthub/AWS/Visual Studio Code
+    - データベース：
+        - MySQL
 
 - 開発期間
-    開発期間：
+    - 開発期間：
         28日間(3/30 ~ 4/24 )
     平均作業時間：
         10時間/1日
