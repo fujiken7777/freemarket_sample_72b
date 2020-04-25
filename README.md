@@ -4,9 +4,35 @@
 
 # 実装機能紹介
 ### フリーマーケットのアプリケーションを作成しました。
-ffmpeg -i sample.mov -vf readme1.gif
-![toppage mov](https://user-images.githubusercontent.com/61724976/80277418-bd721280-8729-11ea-83a6-c67f7685cd7e.gif)
-readme1.mp4
+### sho1374kの担当箇所
+#### 新規登録
+- sessionを用いたウィザード形式
+- jquery validation pluginを用いたバリデーション
+- deviseというgemを用いたユーザー登録
+![validation mov](https://user-images.githubusercontent.com/61724976/80277528-7df7f600-872a-11ea-8e08-b8244fa06132.gif)
+![souhusaki mov](https://user-images.githubusercontent.com/61724976/80277635-52c1d680-872b-11ea-8a68-e8247aaf6809.gif)
+
+#### SNS認証
+- omniauthというgemを用いたsns認証登録・ログイン(ローカル環境のみ)
+
+##### 新規登録
+![google mp4](https://user-images.githubusercontent.com/61724976/80277772-4d18c080-872c-11ea-92b8-502abaee74c6.gif)
+
+##### ログイン
+![logun mp4](https://user-images.githubusercontent.com/61724976/80277738-12168d00-872c-11ea-8be3-9303b27b894a.gif)
+
+##### クレジットカード登録
+![kureka mov](https://user-images.githubusercontent.com/61724976/80277801-84876d00-872c-11ea-8ba7-185a6c29b00f.gif)
+
+#### パンくず機能
+- gretelというgemを用いたパンくず表示機能
+<img width="1433" alt="7cbe1ecd0be68f8efd83e14aa005b099 (1)" src="https://user-images.githubusercontent.com/61724976/80277675-987e9f00-872b-11ea-8782-00d73a049706.png">
+
+<img width="1426" alt="e5d894b03b3e6c4f2ab05a9d217e2b75 (1)" src="https://user-images.githubusercontent.com/61724976/80277698-bcda7b80-872b-11ea-82f2-066ebb82260b.png">
+
+##### 各個別詳細
+![kobetu mov](https://user-images.githubusercontent.com/61724976/80277828-b4cf0b80-872c-11ea-84ef-dc3b16c96ebe.gif)
+
 ### 開発状況
 - 開発環境
     - 開発言語：
