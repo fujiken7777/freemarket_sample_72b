@@ -54,14 +54,14 @@
 ```
 ```
 <!-- カテゴリー -->
-.select-wrap__box.parentn                   <!-- 親カテゴリー -->
+.select-wrap__box.parentn                   -- 親カテゴリー --
   %select#parent.select-wrap__box--select
     %option{value: 0} 選択して下さい
     - @parents.each do |parent|
       %option{value: "#{parent.id}"} #{parent.main_name}
-.child                                      <!-- 子カテゴリー -->
+.child                                      -- 子カテゴリー --
   %select#child.select-wrap__box--select
-.grand_child                                <!-- 孫カテゴリー -->
+.grand_child                                -- 孫カテゴリー --
   = f.collection_select(:category_id, [], :id, :main_name, {prompt: "選択して下さい"}, {class: 'select-wrap__box--select', id: "grand_child"})
 ```
 
