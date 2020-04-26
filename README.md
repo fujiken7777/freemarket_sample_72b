@@ -4,35 +4,35 @@
 
 ### 開発状況
 - 開発環境  
-    開発言語：  
-        Ruby/Ruby on Railsi 
-    開発ツール：  
-        Github/AWS/Visual Studio Code  
-    データベース：  
-        MySQL  
+  - 開発言語：  
+    - Ruby/Ruby on Railsi 
+  - 開発ツール：  
+    - Github/AWS/Visual Studio Code  
+  - データベース：  
+    - MySQL  
 
 - 開発期間  
-    開発期間：  
-        28日間(3/30 ~ 4/24 )  
-    平均作業時間：  
-        10時間/1日  
+  - 開発期間：  
+    - 28日間(3/30 ~ 4/24 )  
+  - 平均作業時間：  
+    - 10時間/1日  
 
 - 開発体制  
-    人数：  
-        3人  
-    開発方式：  
-        アジャイル型開発（スクラム）  
-    タスク管理：  
-        Trelloによるタスク管理  
+  - 人数：  
+    - 3人  
+  - 開発方式：  
+    - アジャイル型開発（スクラム）  
+  - タスク管理：  
+    - Trelloによるタスク管理  
 
 - 動作概要  
-  接続先情報  
-    URL：  
-        http://18.180.214.184/  
-    ID:  
-        team72b  
-    Pass:  
-        4649  
+  - 接続先情報  
+  - URL：  
+    - http://18.180.214.184/  
+  - ID:  
+    - team72b  
+  - Pass:  
+    - 4649  
   
 ### fujiken7777の担当箇所
 ## 商品出品機能
@@ -42,7 +42,8 @@
 - カテゴリーは親カテゴリーを選択すると、子カテゴリー、孫カテゴリーのセレクトボックスが出現するよう非同期にて実装。
 - その他の選択項目は、active_hashを用いモデル内にデータを保存している。
 - バリデーションを設定し、必須項目が抜けていると登録できないようになっている。
-```画像
+```
+<!-- 画像 -->
 = form_for @product do |f|
           〜省略〜
   %label{for: "product_images_attributes_0_image", class: "label-box", id: "label-box--0"}
@@ -52,7 +53,8 @@
       = image.file_field :image, class: "hidden-field"
       %input{class:"hidden-field", type: "file", name: "product[images_attributes][1][image]", id: "product_images_attributes_1_image" }
 ```
-```カテゴリー
+```
+<!-- カテゴリー -->
 .select-wrap
   .select-wrap__box.parent
     %select#parent.select-wrap__box--select
@@ -83,7 +85,7 @@
 - likesテーブルを作成し、商品とユーザーの紐付けをすることで、どのユーザーがどの商品をいいねしたのか判別できる。
 - 商品(products)テーブルにlikes_countカラムを追加することで、いいねの数が保存できる。
 - マイページのいいね一覧ページからいいねした商品を確認できる。
-![like mp4](https://user-images.githubusercontent.com/61737215/80297448-fc51a800-87bd-11ea-8f17-b13c550a4a1d.gif)
+![いいね機能 mov](https://user-images.githubusercontent.com/61737215/80298325-1099a300-87c6-11ea-8ccb-c00890c06fee.gif)
 
 ## コメント投稿・削除機能
 - コメント投稿を非同期にて実装
