@@ -90,6 +90,13 @@
 ![category mp4](https://user-images.githubusercontent.com/61737215/80297468-286d2900-87be-11ea-8253-296e6cc30715.gif)
 - jQueryを用いて、カテゴリメニューの表示を行っている。
 
+# その他
+## ER図
+![freemarketsample72b ER図](https://user-images.githubusercontent.com/61737215/80300755-45175a00-87da-11ea-92e8-0fa366802ef7.png)
+## 単体テスト/統合テスト(RSpec)
+## スクラムマスター
+- ウィークリースクラム、デイリースクラムを立てたアジャイル開発。
+
 # freemarket_sample_72b DB設計
 ## usersテーブル 
 |Column|Type|Options|
