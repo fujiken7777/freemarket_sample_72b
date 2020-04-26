@@ -36,6 +36,7 @@
   
 ### fujiken7777の担当箇所
 ## 商品出品機能
+![product](https://user-images.githubusercontent.com/61737215/80297361-7b92ac00-87bd-11ea-8803-611df5227c24.gif)
 - 商品情報を保存するProductテーブルと写真を保存するImageテーブルのレコードを1ページで作成するように実装。accepts_nested_attributes_forをmodelで定義し、1つのformで値を送れるように実装。
 - 画像はcarrierwaveを使用し、複数枚投稿ができる。
 - カテゴリーはancestryを用い、seedに記載した親・子・孫のカテゴリーデータをDBに保存している。
@@ -69,32 +70,31 @@
     = f.collection_select(:category_id, [], :id, :main_name, {prompt: "選択して下さい"}, {class: 'select-wrap__box--select', id: "grand_child"})
     %i.fa.fa-angle-down
 ```
-![product](https://user-images.githubusercontent.com/61737215/80297361-7b92ac00-87bd-11ea-8803-611df5227c24.gif)
 
-- jQueryを用いて、登録した写真のプレビュー、写真の削除を非同期にて実装。
 ![product-image mp4](https://user-images.githubusercontent.com/61737215/80297420-b563b280-87bd-11ea-8226-51d65a0c1665.gif)
+- jQueryを用いて、登録した写真のプレビュー、写真の削除を非同期にて実装。
 
 ## 商品編集機能
+![edit mp4](https://user-images.githubusercontent.com/61737215/80297439-e6dc7e00-87bd-11ea-8950-57d641be77d2.gif)
 - 画像やカテゴリーの情報など、すでに登録されている商品情報は編集画面を開いた時点で、表示されるよう実装。
 - 画像は1枚毎に差し替えが可能。
 - バリデーションを設定し、必須項目が抜けていると登録できないようになっている。
-![edit mp4](https://user-images.githubusercontent.com/61737215/80297439-e6dc7e00-87bd-11ea-8950-57d641be77d2.gif)
 
 ## いいね機能
+![いいね機能 mov](https://user-images.githubusercontent.com/61737215/80298325-1099a300-87c6-11ea-8ccb-c00890c06fee.gif)
 - いいねボタン、カウントを非同期にて実装。
 - likesテーブルを作成し、商品とユーザーの紐付けをすることで、どのユーザーがどの商品をいいねしたのか判別できる。
 - 商品(products)テーブルにlikes_countカラムを追加することで、いいねの数が保存できる。
 - マイページのいいね一覧ページからいいねした商品を確認できる。
-![いいね機能 mov](https://user-images.githubusercontent.com/61737215/80298325-1099a300-87c6-11ea-8ccb-c00890c06fee.gif)
 
 ## コメント投稿・削除機能
+![comment mp4](https://user-images.githubusercontent.com/61737215/80297455-0ecbe180-87be-11ea-8621-c89a1239cdfc.gif)
 - コメント投稿を非同期にて実装
 - 自分のアイコンが表示できるようになっている。登録していない場合は共通のアイコン画像を表示。
-![comment mp4](https://user-images.githubusercontent.com/61737215/80297455-0ecbe180-87be-11ea-8621-c89a1239cdfc.gif)
 
 ## カテゴリ機能
-- jQueryを用いて、カテゴリメニューの表示を行っている。
 ![category mp4](https://user-images.githubusercontent.com/61737215/80297468-286d2900-87be-11ea-8253-296e6cc30715.gif)
+- jQueryを用いて、カテゴリメニューの表示を行っている。
 
 # freemarket_sample_72b DB設計
 ## usersテーブル 
