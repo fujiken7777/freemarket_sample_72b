@@ -34,7 +34,7 @@
   - Pass:  
     - 4649  
   
-### fujiken7777の担当箇所
+# fujiken7777の担当箇所
 ## 商品出品機能
 ![product](https://user-images.githubusercontent.com/61737215/80297361-7b92ac00-87bd-11ea-8803-611df5227c24.gif)
 - 商品情報を保存するProductテーブルと写真を保存するImageテーブルのレコードを1ページで作成するように実装。accepts_nested_attributes_forをmodelで定義し、1つのformで値を送れるように実装。
@@ -47,8 +47,6 @@
 <!-- 画像 -->
 = form_for @product do |f|
           〜省略〜
-  %label{for: "product_images_attributes_0_image", class: "label-box", id: "label-box--0"}
-    %pre.label-box__text-visible クリックしてファイルをアップロード
   .hidden-content
     = f.fields_for :images do |image|
       = image.file_field :image, class: "hidden-field"
@@ -56,23 +54,19 @@
 ```
 ```
 <!-- カテゴリー -->
-.select-wrap
-  .select-wrap__box.parent
-    %select#parent.select-wrap__box--select
-      %option{value: 0} 選択して下さい
-      - @parents.each do |parent|
-        %option{value: "#{parent.id}"} #{parent.main_name}
-    %i.fa.fa-angle-down
-  .child
-    %select#child.select-wrap__box--select
-    %i.fa.fa-angle-down
-  .grand_child
-    = f.collection_select(:category_id, [], :id, :main_name, {prompt: "選択して下さい"}, {class: 'select-wrap__box--select', id: "grand_child"})
-    %i.fa.fa-angle-down
+.select-wrap__box.parentn                   <!-- 親カテゴリー -->
+  %select#parent.select-wrap__box--select
+    %option{value: 0} 選択して下さい
+    - @parents.each do |parent|
+      %option{value: "#{parent.id}"} #{parent.main_name}
+.child                                      <!-- 子カテゴリー -->
+  %select#child.select-wrap__box--select
+.grand_child                                <!-- 孫カテゴリー -->
+  = f.collection_select(:category_id, [], :id, :main_name, {prompt: "選択して下さい"}, {class: 'select-wrap__box--select', id: "grand_child"})
 ```
 
-![product-image mp4](https://user-images.githubusercontent.com/61737215/80297420-b563b280-87bd-11ea-8226-51d65a0c1665.gif)
 - jQueryを用いて、登録した写真のプレビュー、写真の削除を非同期にて実装。
+![product-image mp4](https://user-images.githubusercontent.com/61737215/80297420-b563b280-87bd-11ea-8226-51d65a0c1665.gif)
 
 ## 商品編集機能
 ![edit mp4](https://user-images.githubusercontent.com/61737215/80297439-e6dc7e00-87bd-11ea-8950-57d641be77d2.gif)
